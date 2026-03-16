@@ -1,9 +1,11 @@
-const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
+import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-module.exports = buildModule("StorageModule", (m) => {
+const StorageModule = buildModule("StorageModule", (m) => {
 
   const storage = m.contract("Storage");
 
   return { storage };
 
 });
+
+export default StorageModule;
